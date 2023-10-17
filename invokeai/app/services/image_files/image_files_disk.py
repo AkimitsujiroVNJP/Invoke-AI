@@ -67,9 +67,9 @@ class DiskImageFileStorage(ImageFileStorageBase):
             pnginfo = PngImagePlugin.PngInfo()
 
             if metadata is not None:
-                pnginfo.add_text("invokeai_metadata", metadata.json())
+                pnginfo.add_text("invokeai_metadata", metadata.model_dump_json())
             if workflow is not None:
-                pnginfo.add_text("invokeai_workflow", workflow.json())
+                pnginfo.add_text("invokeai_workflow", workflow.model_dump_json())
 
             image.save(
                 image_path,

@@ -813,7 +813,7 @@ def invocation_output(
 
 
 class WithWorkflow(BaseModel):
-    workflow: WorkflowField = InputField(default=None, description=FieldDescriptions.workflow)
+    workflow: Optional[WorkflowField] = InputField(default=None, description=FieldDescriptions.workflow)
 
 
 class MetadataItemField(BaseModel):
@@ -837,4 +837,4 @@ type_adapter_MetadataField = TypeAdapter(MetadataField)
 
 
 class WithMetadata(BaseModel):
-    metadata: MetadataField = InputField(default=None, description=FieldDescriptions.metadata)
+    metadata: Optional[MetadataField] = InputField(default=None, description=FieldDescriptions.metadata)

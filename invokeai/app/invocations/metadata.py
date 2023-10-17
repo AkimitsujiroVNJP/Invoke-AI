@@ -1,4 +1,4 @@
-from typing import Any, Literal, Union
+from typing import Any, Literal, Optional, Union
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -117,78 +117,81 @@ class CoreMetadataInvocation(BaseInvocation):
         default=None,
         description="The generation mode that output this image",
     )
-    positive_prompt: str = InputField(default=None, description="The positive prompt parameter")
-    negative_prompt: str = InputField(default=None, description="The negative prompt parameter")
-    width: int = InputField(default=None, description="The width parameter")
-    height: int = InputField(default=None, description="The height parameter")
-    seed: int = InputField(default=None, description="The seed used for noise generation")
-    rand_device: str = InputField(default=None, description="The device used for random number generation")
-    cfg_scale: float = InputField(default=None, description="The classifier-free guidance scale parameter")
-    steps: int = InputField(default=None, description="The number of steps used for inference")
-    scheduler: str = InputField(default=None, description="The scheduler used for inference")
-    seamless_x: bool = InputField(default=None, description="Whether seamless tiling was used on the X axis")
-    seamless_y: bool = InputField(default=None, description="Whether seamless tiling was used on the Y axis")
-    clip_skip: int = InputField(
+    positive_prompt: Optional[str] = InputField(default=None, description="The positive prompt parameter")
+    negative_prompt: Optional[str] = InputField(default=None, description="The negative prompt parameter")
+    width: Optional[int] = InputField(default=None, description="The width parameter")
+    height: Optional[int] = InputField(default=None, description="The height parameter")
+    seed: Optional[int] = InputField(default=None, description="The seed used for noise generation")
+    rand_device: Optional[str] = InputField(default=None, description="The device used for random number generation")
+    cfg_scale: Optional[float] = InputField(default=None, description="The classifier-free guidance scale parameter")
+    steps: Optional[int] = InputField(default=None, description="The number of steps used for inference")
+    scheduler: Optional[str] = InputField(default=None, description="The scheduler used for inference")
+    seamless_x: Optional[bool] = InputField(default=None, description="Whether seamless tiling was used on the X axis")
+    seamless_y: Optional[bool] = InputField(default=None, description="Whether seamless tiling was used on the Y axis")
+    clip_skip: Optional[int] = InputField(
         default=None,
         description="The number of skipped CLIP layers",
     )
-    model: MainModelField = InputField(default=None, description="The main model used for inference")
-    controlnets: list[ControlField] = InputField(default=None, description="The ControlNets used for inference")
-    ipAdapters: list[IPAdapterMetadataField] = InputField(
+    model: Optional[MainModelField] = InputField(default=None, description="The main model used for inference")
+    controlnets: Optional[list[ControlField]] = InputField(
+        default=None, description="The ControlNets used for inference"
+    )
+    ipAdapters: Optional[list[IPAdapterMetadataField]] = InputField(
         default=None, description="The IP Adapters used for inference"
     )
-    t2iAdapters: list[T2IAdapterField] = InputField(default=None, description="The IP Adapters used for inference")
-    controlnets: list[ControlField] = InputField(default=None, description="The ControlNets used for inference")
-    loras: list[LoRAMetadataField] = InputField(default=None, description="The LoRAs used for inference")
-    strength: float = InputField(
+    t2iAdapters: Optional[list[T2IAdapterField]] = InputField(
+        default=None, description="The IP Adapters used for inference"
+    )
+    loras: Optional[list[LoRAMetadataField]] = InputField(default=None, description="The LoRAs used for inference")
+    strength: Optional[float] = InputField(
         default=None,
         description="The strength used for latents-to-latents",
     )
-    init_image: str = InputField(
+    init_image: Optional[str] = InputField(
         default=None,
         description="The name of the initial image",
     )
-    vae: VAEModelField = InputField(
+    vae: Optional[VAEModelField] = InputField(
         default=None,
         description="The VAE used for decoding, if the main model's default was not used",
     )
 
     # SDXL
-    positive_style_prompt: str = InputField(
+    positive_style_prompt: Optional[str] = InputField(
         default=None,
         description="The positive style prompt parameter",
     )
-    negative_style_prompt: str = InputField(
+    negative_style_prompt: Optional[str] = InputField(
         default=None,
         description="The negative style prompt parameter",
     )
 
     # SDXL Refiner
-    refiner_model: MainModelField = InputField(
+    refiner_model: Optional[MainModelField] = InputField(
         default=None,
         description="The SDXL Refiner model used",
     )
-    refiner_cfg_scale: float = InputField(
+    refiner_cfg_scale: Optional[float] = InputField(
         default=None,
         description="The classifier-free guidance scale parameter used for the refiner",
     )
-    refiner_steps: int = InputField(
+    refiner_steps: Optional[int] = InputField(
         default=None,
         description="The number of steps used for the refiner",
     )
-    refiner_scheduler: str = InputField(
+    refiner_scheduler: Optional[str] = InputField(
         default=None,
         description="The scheduler used for the refiner",
     )
-    refiner_positive_aesthetic_score: float = InputField(
+    refiner_positive_aesthetic_score: Optional[float] = InputField(
         default=None,
         description="The aesthetic score used for the refiner",
     )
-    refiner_negative_aesthetic_score: float = InputField(
+    refiner_negative_aesthetic_score: Optional[float] = InputField(
         default=None,
         description="The aesthetic score used for the refiner",
     )
-    refiner_start: float = InputField(
+    refiner_start: Optional[float] = InputField(
         default=None,
         description="The start value used for refiner denoising",
     )
