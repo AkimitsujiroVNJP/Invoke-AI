@@ -2,155 +2,331 @@
 sd-1/main/stable-diffusion-v1-5:
    description: Stable Diffusion version 1.5 diffusers model (4.27 GB)
    repo_id: runwayml/stable-diffusion-v1-5
-   recommended: True
-   default: True
-sd-1/main/stable-diffusion-v1-5-inpainting:
-   description: RunwayML SD 1.5 model optimized for inpainting, diffusers version (4.27 GB)
-   repo_id: runwayml/stable-diffusion-inpainting
-   recommended: True
+   recommended: False
+   default: False
+   
 sd-2/main/stable-diffusion-2-1:
    description: Stable Diffusion version 2.1 diffusers model, trained on 768 pixel images (5.21 GB)
    repo_id: stabilityai/stable-diffusion-2-1
-   recommended: False
-sd-2/main/stable-diffusion-2-inpainting:
-   description: Stable Diffusion version 2.0 inpainting model (5.21 GB)
-   repo_id: stabilityai/stable-diffusion-2-inpainting
-   recommended: False
-sdxl/main/stable-diffusion-xl-base-1-0:
-   description: Stable Diffusion XL base model (12 GB)
-   repo_id: stabilityai/stable-diffusion-xl-base-1.0
-   recommended: True
-sdxl-refiner/main/stable-diffusion-xl-refiner-1-0:
-   description: Stable Diffusion XL refiner model (12 GB)
-   repo_id: stabilityai/stable-diffusion-xl-refiner-1.0
-   recommended: False
-sdxl/vae/sdxl-1-0-vae-fix:
-   description: Fine tuned version of the SDXL-1.0 VAE
-   repo_id: madebyollin/sdxl-vae-fp16-fix
-   recommended: True
-sd-1/main/Analog-Diffusion:
-   description: An SD-1.5 model trained on diverse analog photographs (2.13 GB)
-   repo_id: wavymulder/Analog-Diffusion
-   recommended: False
-sd-1/main/Deliberate:
-   description: Versatile model that produces detailed images up to 768px (4.27 GB)
-   repo_id: XpucT/Deliberate
-   recommended: False
-sd-1/main/Dungeons-and-Diffusion:
-   description: Dungeons & Dragons characters (2.13 GB)
-   repo_id: 0xJustin/Dungeons-and-Diffusion
-   recommended: False
-sd-1/main/dreamlike-photoreal-2:
-   description: A photorealistic model trained on 768 pixel images based on SD 1.5 (2.13 GB)
-   repo_id: dreamlike-art/dreamlike-photoreal-2.0
-   recommended: False
-sd-1/main/Inkpunk-Diffusion:
-   description: Stylized illustrations inspired by Gorillaz, FLCL and Shinkawa; prompt with "nvinkpunk" (4.27 GB)
-   repo_id: Envvi/Inkpunk-Diffusion
    recommended: False
 sd-1/main/openjourney:
    description: An SD 1.5 model fine tuned on Midjourney; prompt with "mdjrny-v4 style" (2.13 GB)
    repo_id: prompthero/openjourney
    recommended: False
-sd-1/main/seek.art_MEGA:
-   repo_id: coreco/seek.art_MEGA
-   description: A general use SD-1.5 "anything" model that supports multiple styles (2.1 GB)
+sd-1/main/portraitplus:
+   description: An SD-1.5 model trained on close range portraits of people; prompt with "portrait+" (2.13 GB)
+   repo_id: wavymulder/portraitplus
    recommended: False
-sd-1/main/trinart_stable_diffusion_v2:
-   description: An SD-1.5 model finetuned with ~40K assorted high resolution manga/anime-style images (2.13 GB)
-   repo_id: naclbit/trinart_stable_diffusion_v2
+sd-1/main/waifu-diffusion:
+   description: An SD-1.5 model trained on 680k anime/manga-style images (2.13 GB)
+   repo_id: hakurei/waifu-diffusion
    recommended: False
-sd-1/controlnet/qrcode_monster:
-   repo_id: monster-labs/control_v1p_sd15_qrcode_monster
-   subfolder: v2
 sd-1/controlnet/canny:
    repo_id: lllyasviel/control_v11p_sd15_canny
    recommended: True
 sd-1/controlnet/inpaint:
    repo_id: lllyasviel/control_v11p_sd15_inpaint
+   recommended: False
 sd-1/controlnet/mlsd:
    repo_id: lllyasviel/control_v11p_sd15_mlsd
+   recommended: False
 sd-1/controlnet/depth:
    repo_id: lllyasviel/control_v11f1p_sd15_depth
    recommended: True
 sd-1/controlnet/normal_bae:
    repo_id: lllyasviel/control_v11p_sd15_normalbae
+   recommended: False
 sd-1/controlnet/seg:
    repo_id: lllyasviel/control_v11p_sd15_seg
+   recommended: False
 sd-1/controlnet/lineart:
    repo_id: lllyasviel/control_v11p_sd15_lineart
-   recommended: True
+   recommended: False
 sd-1/controlnet/lineart_anime:
    repo_id: lllyasviel/control_v11p_sd15s2_lineart_anime
+   recommended: False
 sd-1/controlnet/openpose:
    repo_id: lllyasviel/control_v11p_sd15_openpose
-   recommended: True
+   recommended: False
 sd-1/controlnet/scribble:
    repo_id: lllyasviel/control_v11p_sd15_scribble
    recommended: False
 sd-1/controlnet/softedge:
    repo_id: lllyasviel/control_v11p_sd15_softedge
+   recommended: False
 sd-1/controlnet/shuffle:
    repo_id: lllyasviel/control_v11e_sd15_shuffle
+   recommended: False
 sd-1/controlnet/tile:
    repo_id: lllyasviel/control_v11f1e_sd15_tile
+   recommended: False
 sd-1/controlnet/ip2p:
    repo_id: lllyasviel/control_v11e_sd15_ip2p
-sd-1/t2i_adapter/canny-sd15:
-   repo_id: TencentARC/t2iadapter_canny_sd15v2
-sd-1/t2i_adapter/sketch-sd15:
-   repo_id: TencentARC/t2iadapter_sketch_sd15v2
-sd-1/t2i_adapter/depth-sd15:
-   repo_id: TencentARC/t2iadapter_depth_sd15v2
-sd-1/t2i_adapter/zoedepth-sd15:
-   repo_id: TencentARC/t2iadapter_zoedepth_sd15v1
-sdxl/t2i_adapter/canny-sdxl:
-   repo_id: TencentARC/t2i-adapter-canny-sdxl-1.0
-sdxl/t2i_adapter/zoedepth-sdxl:
-   repo_id: TencentARC/t2i-adapter-depth-zoe-sdxl-1.0
-sdxl/t2i_adapter/lineart-sdxl:
-   repo_id: TencentARC/t2i-adapter-lineart-sdxl-1.0
-sdxl/t2i_adapter/sketch-sdxl:
-   repo_id: TencentARC/t2i-adapter-sketch-sdxl-1.0
+   recommended: False
 sd-1/embedding/EasyNegative:
    path: https://huggingface.co/embed/EasyNegative/resolve/main/EasyNegative.safetensors
    recommended: True
 sd-1/embedding/ahx-beta-453407d:
    repo_id: sd-concepts-library/ahx-beta-453407d
-sd-1/lora/LowRA:
-   path: https://civitai.com/api/download/models/63006
+   recommended: False
+sd-1/lora/Eye:
+   path: https://civitai.com/api/download/models/6433
    recommended: True
-sd-1/lora/Ink scenery:
-   path: https://civitai.com/api/download/models/83390
-sd-1/ip_adapter/ip_adapter_sd15:
-   repo_id: InvokeAI/ip_adapter_sd15
+sd-1/lora/Yan Shu Chi:
+   path: https://civitai.com/api/download/models/149698
    recommended: True
-   requires:
-      - InvokeAI/ip_adapter_sd_image_encoder
-   description: IP-Adapter for SD 1.5 models
-sd-1/ip_adapter/ip_adapter_plus_sd15:
-   repo_id: InvokeAI/ip_adapter_plus_sd15
-   recommended: False
-   requires:
-      - InvokeAI/ip_adapter_sd_image_encoder
-   description: Refined IP-Adapter for SD 1.5 models
-sd-1/ip_adapter/ip_adapter_plus_face_sd15:
-   repo_id: InvokeAI/ip_adapter_plus_face_sd15
-   recommended: False
-   requires:
-      - InvokeAI/ip_adapter_sd_image_encoder
-   description: Refined IP-Adapter for SD 1.5 models, adapted for faces
-sdxl/ip_adapter/ip_adapter_sdxl:
-   repo_id: InvokeAI/ip_adapter_sdxl
-   recommended: False
-   requires:
-      - InvokeAI/ip_adapter_sdxl_image_encoder
-   description: IP-Adapter for SDXL models
-any/clip_vision/ip_adapter_sd_image_encoder:
-   repo_id: InvokeAI/ip_adapter_sd_image_encoder
-   recommended: False
-   description: Required model for using IP-Adapters with SD-1/2 models
-any/clip_vision/ip_adapter_sdxl_image_encoder:
-   repo_id: InvokeAI/ip_adapter_sdxl_image_encoder
-   recommended: False
-   description: Required model for using IP-Adapters with SDXL models
+sd-1/lora/HyperRG:
+   path: https://civitai.com/api/download/models/145643
+   recommended: True
+sd-1/lora/NijiMale:
+   path: https://civitai.com/api/download/models/164114
+   recommended: True
+sd-1/lora/Son Gohan:
+   path: https://civitai.com/api/download/models/51000
+   recommended: True
+sd-1/lora/exveemon:
+   path: https://civitai.com/api/download/models/62186
+   recommended: True
+sd-1/lora/Venom:
+   path: https://civitai.com/api/download/models/94790
+   recommended: True
+sd-1/lora/Penis chart:
+   path: https://civitai.com/api/download/models/126519
+   recommended: True
+sd-1/lora/giant cat:
+   path: https://civitai.com/api/download/models/163660
+   recommended: True
+sd-1/lora/sacred beast:
+   path: https://civitai.com/api/download/models/179193
+   recommended: True
+sd-1/lora/sdxl sacred beast:
+   path: https://civitai.com/api/download/models/178749
+   recommended: True
+sd-1/lora/Envy Floorplans XL:
+   path: https://civitai.com/api/download/models/172438
+   recommended: True
+sd-1/lora/Ancient Chinese martial arts:
+   path: https://civitai.com/api/download/models/164383
+   recommended: True
+sd-1/lora/kumak71395 style:
+   path: https://civitai.com/api/download/models/9334
+   recommended: True
+sd-1/lora/Tick-tock meme:
+   path: https://civitai.com/api/download/models/64109
+   recommended: True
+sd-1/lora/fcon style:
+   path: https://civitai.com/api/download/models/14491
+   recommended: True
+sd-1/lora/tekkowang style:
+   path: https://civitai.com/api/download/models/8569
+   recommended: True
+sd-1/lora/Lin Hu:
+   path: https://civitai.com/api/download/models/181012
+   recommended: True
+sd-1/lora/Aztech Armor:
+   path: https://civitai.com/api/download/models/168673
+   recommended: True
+sd-1/lora/karate uniform:
+   path: https://civitai.com/api/download/models/163218
+   recommended: True
+sd-1/lora/东方机能 East Techwear:
+   path: https://civitai.com/api/download/models/177207
+   recommended: True
+sd-1/lora/Chinese Mid-Autumn Festival:
+   path: https://civitai.com/api/download/models/172691
+   recommended: True
+sd-1/lora/EVA AYANAMI REI:
+   path: https://civitai.com/api/download/models/180830
+   recommended: True
+sd-1/lora/Genshin Styled Male Clothing:
+   path: https://civitai.com/api/download/models/166778
+   recommended: True
+sd-1/lora/Genshin Styled Clothing:
+   path: https://civitai.com/api/download/models/155407
+   recommended: True
+sd-1/lora/Genshin Impact All In One:
+   path: https://civitai.com/api/download/models/116970
+   recommended: True
+sd-1/lora/Lumine Genshin Impact:
+   path: https://civitai.com/api/download/models/41292
+   recommended: True
+sd-1/lora/Aether Genshin Impact:
+   path: https://civitai.com/api/download/models/95232
+   recommended: True
+sd-1/lora/Chongyun Genshin Impact:
+   path: https://civitai.com/api/download/models/146166
+   recommended: True
+sd-1/lora/Midoriya Izuku:
+   path: https://civitai.com/api/download/models/141455
+   recommended: True
+sd-1/lora/Satoru Gojo:
+   path: https://civitai.com/api/download/models/132846
+   recommended: True
+sd-1/lora/Pastry Mill Morteln:
+   path: https://civitai.com/api/download/models/128083
+   recommended: True
+sd-1/lora/Albedo Genshin Impact:
+   path: https://civitai.com/api/download/models/114039
+   recommended: True
+sd-1/lora/Tartaglia (Childe) Genshin Impact:
+   path: https://civitai.com/api/download/models/110137
+   recommended: True
+sd-1/lora/Light Tenryuu:
+   path: https://civitai.com/api/download/models/102321
+   recommended: True
+sd-1/lora/Shiki Granbell:
+   path: https://civitai.com/api/download/models/92572
+   recommended: True
+sd-1/lora/Mikey:
+   path: https://civitai.com/api/download/models/84880
+   recommended: True
+sd-1/lora/Todoroki Shoto:
+   path: https://civitai.com/api/download/models/85604
+   recommended: True
+sd-1/lora/Karma Akabane:
+   path: https://civitai.com/api/download/models/74147
+   recommended: True
+sd-1/lora/Itadori Yuuji:
+   path: https://civitai.com/api/download/models/135139
+   recommended: True
+sd-1/lora/Eugeo:
+   path: https://civitai.com/api/download/models/158391
+   recommended: True
+sd-1/lora/Takemichi Hanagaki:
+   path: https://civitai.com/api/download/models/158377
+   recommended: True
+sd-1/lora/bennett (genshin impact):
+   path: https://civitai.com/api/download/models/17615
+   recommended: True
+sd-1/lora/razor (genshin impact):
+   path: https://civitai.com/api/download/models/17617
+   recommended: True
+sd-1/lora/neuvillette (genshin impact):
+   path: https://civitai.com/api/download/models/170163
+   recommended: True
+sd-1/lora/Freminet (genshin impact):
+   path: https://civitai.com/api/download/models/164024
+   recommended: True
+sd-1/lora/Arena of Valor style:
+   path: https://civitai.com/api/download/models/154273
+   recommended: True
+sd-1/lora/lyney (genshin impact):
+   path: https://civitai.com/api/download/models/156427
+   recommended: True
+sd-1/lora/https://civitai.com/api/download/models/17628:
+   path: gorou (genshin impact) realistic
+   recommended: True
+sd-1/lora/Gorou Genshin:
+   path: https://civitai.com/api/download/models/17463
+   recommended: True
+sd-1/lora/XingQiu Genshin:
+   path: https://civitai.com/api/download/models/24910
+   recommended: True
+sd-1/lora/cyno (genshin impact):
+   path: https://civitai.com/api/download/models/17603
+   recommended: True
+sd-1/lora/tighnari (genshin impact):
+   path: https://civitai.com/api/download/models/17610
+   recommended: True
+sd-1/lora/scaramouche (genshin impact):
+   path: https://civitai.com/api/download/models/17595
+   recommended: True
+sd-1/lora/Shikanoin Heizou (genshin impact):
+   path: https://civitai.com/api/download/models/17608
+   recommended: True
+sd-1/lora/mika (genshin impact):
+   path: https://civitai.com/api/download/models/27593
+   recommended: True
+sd-1/lora/Xiao Genshin Impact:
+   path: https://civitai.com/api/download/models/44324
+   recommended: True
+sd-1/lora/Kazuha Genshin Impact:
+   path: https://civitai.com/api/download/models/21253
+   recommended: True
+sd-1/lora/Arataki Itto Genshin Impact:
+   path: https://civitai.com/api/download/models/15842
+   recommended: True
+sd-1/lora/Trailblazer Female:
+   path: https://civitai.com/api/download/models/65996
+   recommended: True
+sd-1/lora/Dan Heng:
+   path: https://civitai.com/api/download/models/57770
+   recommended: True
+sd-1/lora/Arlan:
+   path: https://civitai.com/api/download/models/129550
+   recommended: True
+sd-1/lora/Yanqing:
+   path: https://civitai.com/api/download/models/94732
+   recommended: True
+sd-1/lora/Jing Yuan:
+   path: https://civitai.com/api/download/models/76136
+   recommended: True
+sd-1/lora/Blade:
+   path: https://civitai.com/api/download/models/84939
+   recommended: True
+sd-1/lora/Tanjiro:
+   path: https://civitai.com/api/download/models/119885
+   recommended: True
+sd-1/lora/Kimetsu No Yaiba Anime Style:
+   path: https://civitai.com/api/download/models/25321
+   recommended: True
+sd-1/lora/The Promised Neverland Anime Style :
+   path: https://civitai.com/api/download/models/95511
+   recommended: True
+sd-1/lora/Ken Sugimori Style for Fakemon and Characters:
+   path: https://civitai.com/api/download/models/73529
+   recommended: True
+sd-1/lora/Avatar: The Last Airbender Style:
+   path: https://civitai.com/api/download/models/91170
+   recommended: True
+sd-1/lora/Mushoku Tensei Anime Style:
+   path: https://civitai.com/api/download/models/67458
+   recommended: True
+sd-1/lora/Ben 10 Style:
+   path: https://civitai.com/api/download/models/89381
+   recommended: True
+sd-1/lora/League of Legends Official Art Style:
+   path: https://civitai.com/api/download/models/89324
+   recommended: True
+sd-1/lora/Add More Details:
+   path: https://civitai.com/api/download/models/87153
+   recommended: True
+sd-1/lora/Spy x Family Style:
+   path: https://civitai.com/api/download/models/86353
+   recommended: True
+sd-1/lora/Digimon Adventures Style:
+   path: https://civitai.com/api/download/models/76910
+   recommended: True
+sd-1/lora/The Legend of Zelda Art Style:
+   path: https://civitai.com/api/download/models/72659
+   recommended: True
+sd-1/lora/Honkai: Star Rail Video Game Graphics Style:
+   path: https://civitai.com/api/download/models/64848
+   recommended: True
+sd-1/lora/Dragon Ball Super Style:
+   path: https://civitai.com/api/download/models/64076
+   recommended: True
+sd-1/lora/Sword Art Online Anime Style:
+   path: https://civitai.com/api/download/models/58499
+   recommended: True
+sd-1/lora/Chainsaw Man Anime:
+   path: https://civitai.com/api/download/models/57527
+   recommended: True
+sd-1/lora/Bleach Anime Styl:
+   path: https://civitai.com/api/download/models/56452
+   recommended: True
+sd-1/lora/Tensura Tensei Shitara Slime Datta Ken Style:
+   path: https://civitai.com/api/download/models/35907
+   recommended: True
+sd-1/lora/One Piece Style:
+   path: https://civitai.com/api/download/models/6331
+   recommended: True
+sd-1/lora/Attack on Titan Anime Style:
+   path: https://civitai.com/api/download/models/7466
+   recommended: True
+sd-1/lora/My Hero Academia Style:
+   path: https://civitai.com/api/download/models/5784
+   recommended: True
+sd-1/lora/Sans Undertale:
+   path: https://civitai.com/api/download/models/6891
+   recommended: True
